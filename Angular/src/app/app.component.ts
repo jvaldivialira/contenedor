@@ -8,7 +8,7 @@ import {HttpRequestService} from './http-request.service';
 })
 export class AppComponent implements OnInit {
   title = 'Angular';
-  url = 'http://localhost:8080/personen';
+  url = 'http://localhost:8082/personen';
 
   public data: any;
 

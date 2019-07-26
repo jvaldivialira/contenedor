@@ -5,22 +5,23 @@ services:
     image: mysql
     container_name: database
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: alejandra2019
       MYSQL_DATABASE: dockerAngularSpringDatabase
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_USER: root
+      MYSQL_PASSWORD: alejandra2019
     ports:
-      - 3306:3306
+      - 3309:3306
     volumes:
      - dockerAngularSpringDatabaseData:/var/lib/mysql
     networks:
      - backendNetwork
      
   springapi:
+   
     image: openjdk:10-jre-slim
     container_name: springapi
     ports:
-      - 8080:8080
+      - 8082:8080
     depends_on:
       - database
     volumes:

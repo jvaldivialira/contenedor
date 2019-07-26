@@ -4,7 +4,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table
+@Table(
+	    name = "personen" , 
+	    schema = "dockerangularspringdatabase") 
 public class Person {
 
     @Id

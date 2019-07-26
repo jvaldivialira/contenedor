@@ -12,7 +12,7 @@ public class HelloController {
     @Autowired
     PersonRepository personRepository;
 
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(
             method = RequestMethod.GET,
             path = "/personen",
@@ -22,7 +22,7 @@ public class HelloController {
         return personRepository.findAll();
     }
 
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(
             method = RequestMethod.POST,
             path = "/personen",
